@@ -1,0 +1,186 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.cajitas {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    width: 900px;
+    background-color: rgb(190, 223, 5);
+}
+
+.cajita {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(53, 216, 13);
+    display: grid;
+    place-items: center;
+}
+
+.tarjetitas, .tarjetas {
+    display: flex;
+    width: 1100px;
+    gap: 3rem;
+}
+
+.tarjetita, .tarjeta {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgreen;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.tarjetita img, .tarjeta img {
+    max-width: 100%;
+}
+
+
+/*** TRANSITIONS ***/
+
+.cajita1 {
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(.12,.43,.92,1.3);
+    animation:bounce-in-top 1.1s both
+}
+
+.cajita1:hover {
+    width: 100%;
+    background-color: rgb(233, 79, 59);
+    
+}
+
+
+/*** ANIMATIONS ***/
+
+.cajita2 {
+    transition: transform 1s;
+    animation:bounce-in-top 1.1s both
+}
+
+
+
+/*** BACKGROUND GRADIENTS ***/
+
+.cajita2 {
+    background: rgb(15, 15, 6);
+background: linear-gradient(90deg, rgb(84, 87, 7) 15%, rgba(224,43,20,1) 48%, rgba(110,208,88,1) 72%, rgba(95,230,97,1) 75%);
+
+}
+.cajita3:hover{
+    width: 100%;
+    background-color:rgb(147, 221, 10);
+}
+
+.cajita3 {
+    background: rgb(15, 15, 6);
+background: linear-gradient(90deg, rgb(84, 87, 7) 15%, rgba(224,43,20,1) 48%, rgba(110,208,88,1) 72%, rgba(95,230,97,1) 75%);
+
+}
+.cajita3:hover{
+    width: 100%;
+    background-color:aqua;
+}
+
+
+
+.cajita4 {
+    background-image: linear-gradient(to right, #584e11 0%, #0db329 100%);
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(.12,.43,.92,1.3);
+
+}
+.cajita4:hover {
+    width: 100%;
+    background-color: rgb(207, 11, 175);
+}
+
+
+/*** TRANSFORMS ***/
+
+
+.cajita3 {
+    transition: transform 1s;
+    animation:bounce-in-top 1.1s both
+}
+
+.cajita3:hover {
+    transform: rotate(140deg) scale(2) skew(30deg);
+}
+
+.tarjetita {
+    transition: all .3s;
+    box-shadow: rgba(85, 57, 4, 0.4) 0px 5px, rgba(151, 149, 10, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(122, 4, 4, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+}
+
+.tarjetita:hover {
+    transform: scale(1.1) translateY(-40px);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+/*** ANIMISTA ****/
+
+.cajita2 {
+    .bounce-in-top{-webkit-animation:bounce-in-top 1.1s both;animation:bounce-in-top 1.1s both}
+    animation:roll-in-left .2s ease-out both;
+    animation-delay: 1.1s both;
+}
+.cajita3 {
+    .bounce-in-top{-webkit-animation:bounce-in-top 1.1s both;animation:bounce-in-top 1.1s both}
+    animation:roll-in-left .2s ease-out both;
+    animation-delay: 1.1s both;
+}
+
+.cajita4 {
+    animation:bounce-in-top 1.1s both
+}
+
+
+ 
+
+
+.tarjetita {
+    -webkit-animation:tilt-in-fwd-tr .6s cubic-bezier(.25,.46,.45,.94) both;
+   animation:bounce-in-top 1.1s both
+}
+
+.tarjetita1 {
+    animation-delay: 1s;
+}
+
+.tarjetita2 {
+    animation-delay: 2s;
+}
+
+.tarjetita3 {
+    animation-delay: 3s;
+}
+
+.bounce-in-top{animation:bounce-in-top 1.1s both}
+
+
+@keyframes bounce-in-top{0%{transform:translateY(-500px);animation-timing-function:ease-in;opacity:0}38%{transform:translateY(0);animation-timing-function:ease-out;opacity:1}55%{transform:translateY(-65px);animation-timing-function:ease-in}72%{transform:translateY(0);animation-timing-function:ease-out}81%{transform:translateY(-28px);animation-timing-function:ease-in}90%{transform:translateY(0);animation-timing-function:ease-out}95%{transform:translateY(-8px);animation-timing-function:ease-in}100%{transform:translateY(0);animation-timing-function:ease-out}}
